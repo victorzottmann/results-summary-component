@@ -185,6 +185,7 @@ body p {
 
 .score span {
   color: var(--clr-neutral-dark-gray-blue);
+  font-weight: var(--font-bold);
 }
 
 button {
