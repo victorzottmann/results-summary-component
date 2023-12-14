@@ -9,13 +9,18 @@
   --clr-gradient-bg-slate-blue: hsl(252, 100%, 67%);
   --clr-gradient-bg-royal-blue: hsl(241, 81%, 54%);
   --clr-gradient-circle-violet-blue: hsla(256, 72%, 46%, 1);
-  --clr-gradient-circle-persian-blue: hsla(241, 72%, 46%, 0);
+  --clr-gradient-circle-persian-blue: hsla(241, 72%, 46%, .2);
 
   /* Neutral */
   --clr-neutral-white: hsl(0, 0%, 100%);
   --clr-neutral-pale-blue: hsl(221, 100%, 96%);
   --clr-neutral-lavender: hsl(241, 100%, 89%);
   --clr-neutral-dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* Font Weights */
+  --font-medium: 500;
+  --font-bold: 700;
+  --font-extra-bold: 800;
 }
 
 * {
@@ -33,11 +38,67 @@ body p {
 
 /* Mobile-First (width = 375px) */
 .container {
+  width: 375px;
+  height: 750px;
   box-sizing: border-box;
-  max-width: 375px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid black;
+  border: 1px solid gray;
+}
+
+.results {
+  height: 46%; /* 40% of the parent (container) */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(var(--clr-gradient-bg-slate-blue), var(--clr-gradient-bg-royal-blue));
+  color: var(--clr-neutral-white);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: var(--clr-neutral-lavender);
+}
+
+.result {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--clr-gradient-circle-violet-blue), var(--clr-gradient-circle-persian-blue));
+}
+
+.result p {
+  text-align: center;
+  font-size: 16px;
+}
+
+.result p span {
+  display: block;
+  font-size: 50px;
+  font-weight: var(--font-bold);
+  color: var(--clr-neutral-white);
+}
+
+.result-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.result-description h2 {
+  color: var(--clr-neutral-white);
+}
+
+.result-description p {
+  text-align: center;
+  color: var(--clr-neutral-lavender);
+  font-weight: 400;
+  font-size: 16px;
+  width: 80%;
 }
