@@ -1,0 +1,43 @@
+:root {
+  /* Primary */
+  --clr-primary-red: hsl(0, 100%, 67%);
+  --clr-primary-yellow: hsl(39, 100%, 56%);
+  --clr-primary-teal: hsl(166, 100%, 37%);
+  --clr-primary-blue: hsl(234, 85%, 45%);
+
+  /* Gradient */
+  --clr-gradient-bg-slate-blue: hsl(252, 100%, 67%);
+  --clr-gradient-bg-royal-blue: hsl(241, 81%, 54%);
+  --clr-gradient-circle-violet-blue: hsla(256, 72%, 46%, 1);
+  --clr-gradient-circle-persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-pale-blue: hsl(221, 100%, 96%);
+  --clr-neutral-lavender: hsl(241, 100%, 89%);
+  --clr-neutral-dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body p {
+  font-size: 18px;
+}
+
+/* Mobile-First (width = 375px) */
+.container {
+  box-sizing: border-box;
+  max-width: 375px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+}
