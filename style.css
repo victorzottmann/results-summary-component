@@ -5,6 +5,12 @@
   --clr-primary-teal: hsl(166, 100%, 37%);
   --clr-primary-blue: hsl(234, 85%, 45%);
 
+  /* Primary with Transparency for Background (bg)*/
+  --clr-bg-red: hsla(0, 100%, 67%, .07);
+  --clr-bg-yellow: hsla(39, 100%, 56%, .07);
+  --clr-bg-teal: hsla(166, 100%, 37%, .07);
+  --clr-bg-blue: hsla(234, 85%, 45%, .07);
+
   /* Gradient */
   --clr-gradient-bg-slate-blue: hsl(252, 100%, 67%);
   --clr-gradient-bg-royal-blue: hsl(241, 81%, 54%);
@@ -39,7 +45,7 @@ body p {
 /* Mobile-First (width = 375px) */
 .container {
   width: 375px;
-  height: 750px;
+  height: 800px;
   box-sizing: border-box;
   position: absolute;
   top: 50%;
@@ -48,10 +54,14 @@ body p {
   border: 1px solid gray;
 }
 
-.results {
-  height: 46%; /* 40% of the parent (container) */
+.results,
+.summary {
   display: flex;
   flex-direction: column;
+}
+
+.results {
+  height: 46%; /* 40% of the parent (container) */
   justify-content: space-evenly;
   align-items: center;
   background: linear-gradient(var(--clr-gradient-bg-slate-blue), var(--clr-gradient-bg-royal-blue));
@@ -101,4 +111,88 @@ body p {
   font-weight: 400;
   font-size: 16px;
   width: 80%;
+}
+
+.summary {
+  padding: 30px;
+}
+
+.summary h3 {
+  padding-bottom: 15px;
+  color: var(--clr-neutral-dark-gray-blue);
+}
+
+.score-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.score-bar p {
+  font-size: 15px;
+}
+
+.score-bar:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.score-icon-title {
+  display: flex;
+  font-size: 15px;
+}
+
+.score-icon-title p {
+  padding-left: 10px;
+}
+
+#reaction {
+  color: var(--clr-primary-red);
+}
+
+#memory {
+  color: var(--clr-primary-yellow);
+}
+
+#verbal {
+  color: var(--clr-primary-teal);
+}
+
+#visual {
+  color: var(--clr-primary-blue);
+}
+
+.score-bar[data-score="reaction"] {
+  background-color: var(--clr-bg-red);
+}
+
+.score-bar[data-score="memory"] {
+  background-color: var(--clr-bg-yellow);
+}
+
+.score-bar[data-score="verbal"] {
+  background-color: var(--clr-bg-teal);
+}
+
+.score-bar[data-score="visual"] {
+  background-color: var(--clr-bg-blue);
+}
+
+.score {
+  color: gray;
+}
+
+.score span {
+  color: var(--clr-neutral-dark-gray-blue);
+}
+
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--clr-neutral-dark-gray-blue);
+  color: var(--clr-neutral-white);
+  font-size: 18px;
+  font-family: inherit;
 }
