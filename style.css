@@ -216,10 +216,6 @@ button {
     justify-content: space-around;
   }
 
-  .results h3 {
-    margin-top: 5px;
-  }
-
   .result {
     width: 180px;
     height: 180px;
